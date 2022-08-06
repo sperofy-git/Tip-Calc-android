@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:text="15%"
+        android:textColor="#FF9800"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tipBar"
+        app:layout_constraintTop_toBottomOf="@+id/amtSplit" />
+
+    <EditText
+        android:id="@+id/totalBill"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TotalBillLabel"
+        app:layout_constraintTop_toBottomOf="@+id/personCnt" />
+
+    <TextView
+        android:id="@+id/amtSplit"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AmtToSplitLabel"
+        app:layout_constraintTop_toBottomOf="@+id/splitBar" />
+
+    <TextView
+        android:id="@+id/Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="21dp"
+        android:ems="10"
+        android:hint="Tip Amount"
+        android:inputType="number"
+        android:textColor="#FF9800"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipBar" />
+
+    <SeekBar
+        android:id="@+id/splitBar"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="16dp"
+        android:max="100"
+        app:layout_constraintBottom_toTopOf="@+id/amtSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SplitLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalBill" />
+
+    <SeekBar
+        android:id="@+id/tipBar"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="16dp"
+        android:max="30"
+        app:layout_constraintBottom_toTopOf="@+id/Tip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TipLabel"
+        app:layout_constraintTop_toBottomOf="@+id/amtSplit" />
+
+    <TextView
+        android:id="@+id/SplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Split %"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/amtSplit"
+        app:layout_constraintEnd_toStartOf="@+id/splitBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalBill" />
+
+    <TextView
+        android:id="@+id/splitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="100%"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/splitBar"
+        app:layout_constraintTop_toBottomOf="@+id/totalBill" />
+
+    <TextView
+        android:id="@+id/TipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Tip %"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Tip"
+        app:layout_constraintEnd_toStartOf="@+id/tipBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AmtToSplitLabel" />
+
+    <EditText
+        android:id="@+id/personCnt"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="viewStart"
+        android:textColor="#9C27B0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PersonCntLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/finalAmt"
+        android:layout_width="175dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="28dp"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FinalAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/Tip" />
+
+    <TextView
+        android:id="@+id/yourSplit"
+        android:layout_width="175dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:textColor="#2196F3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/YourSplitLabel"
+        app:layout_constraintTop_toBottomOf="@+id/finalAmt" />
+
+    <TextView
+        android:id="@+id/otherSplit"
+        android:layout_width="175dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/OtherSplitLabel"
+        app:layout_constraintTop_toBottomOf="@+id/yourSplit" />
+
+    <TextView
+        android:id="@+id/FinalAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="14dp"
+        android:text="Final Amount:"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/finalAmt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tip" />
+
+    <TextView
+        android:id="@+id/YourSplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="14dp"
+        android:text="Your Split:"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/yourSplit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FinalAmountLabel" />
+
+    <TextView
+        android:id="@+id/OtherSplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="14dp"
+        android:text="Other's Split:"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/otherSplit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/YourSplitLabel" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="289dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="80dp"
+        android:background="#FF9800"
+        android:text="Reset"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OtherSplitLabel" />
+
+    <TextView
+        android:id="@+id/PersonCntLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
+        android:text="Num of Persons"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/personCnt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TotalBillLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:text="Total Bill Amount"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/totalBill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PersonCntLabel" />
+
+    <TextView
+        android:id="@+id/AmtToSplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="22dp"
+        android:text="Amount to Split"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/amtSplit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SplitLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
